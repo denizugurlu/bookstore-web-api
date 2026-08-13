@@ -15,6 +15,21 @@ public static class DataGenerator
             return; // Zaten veri varsa tekrar ekleme
         }
 
+        context.Genres.AddRange(
+            new Genre
+            {
+                Name = "Personal Growth"
+            },
+            new Genre
+            {
+                Name = "Science Fiction"
+            },
+            new Genre
+            {
+                Name = "Noval"
+            }
+        );
+
         context.Books.AddRange(
             new Book
             {

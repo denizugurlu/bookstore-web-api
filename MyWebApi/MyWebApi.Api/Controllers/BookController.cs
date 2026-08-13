@@ -11,7 +11,7 @@ using MyWebApi.Api.DBOperations;
 namespace MyWebApi.Api.Controllers;
 
 [ApiController]
-[Route("api/[controller]s")]
+[Route("[controller]s")]
 public class BookController : ControllerBase
 {
     private readonly BookStoreDbContext _context;
