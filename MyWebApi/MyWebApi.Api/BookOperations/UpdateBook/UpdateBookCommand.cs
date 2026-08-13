@@ -20,6 +20,7 @@ public class UpdateBookCommand
             throw new InvalidOperationException("Güncellenecek kitap bulunamadı!");
 
         book.GenreId = Model.GenreId != default ? Model.GenreId : book.GenreId;
+        book.AuthorId = Model.AuthorId != default ? Model.AuthorId : book.AuthorId;
         book.Title = Model.Title != default ? Model.Title : book.Title;
 
         _dbContext.SaveChanges();
@@ -30,4 +31,5 @@ public class UpdateBookModel
 {
     public string Title { get; set; } = string.Empty;
     public int GenreId { get; set; }
+    public int AuthorId { get; set; }
 }
